@@ -2,14 +2,30 @@
 const addTask = document.getElementById('add-task');
 const taskContainer = document.getElementById('task-container');
 const inputTask = document.getElementById('input-task');
-
+let taskRemaining = 0;
+let taskFinished = 0;
+let taskTotal = 0;
 
 // Event Listener for Add Button
 
 addTask.addEventListener('click', function(){
-
+// <div class="task"></div>
     let task = document.createElement('div');
     task.classList.add('task');
+    // document
+    //     .getElementById('compteur1')
+    //     .innerText = (++taskRemaining) + ''; 
+
+
+// document
+//   .getElementById("parent")
+//   .addEventListener("click", function() {
+//   document
+//     .getElementById("parent-count")
+//     .innerText = (++parentClicks) + '';
+// });
+
+
 
     let li = document.createElement('li');
     li.innerText = `${inputTask.value}`;
@@ -21,6 +37,9 @@ addTask.addEventListener('click', function(){
     checkButton.classList.add('checkTask');
     task.appendChild(checkButton);
 
+
+
+    // <button class="supprimerBouton></button>"
     let deleteButton = document.createElement("button");
     deleteButton.innerHTML = '<i class="bi bi-trash3"></i>';
     deleteButton.classList.add('deleteTask');
@@ -28,9 +47,11 @@ addTask.addEventListener('click', function(){
 
     if(inputTask.value === "") {
         
-        alert('Please Enter a Task');
+        alert("S'il vous plait entré une tache.");
+        // Si inputTask est vide pas de +1 
     }else{
         taskContainer.appendChild(task);
+        document.getElementById('compteur1').innerText = (++taskRemaining) + ''; 
     }
 
     inputTask.value = "";

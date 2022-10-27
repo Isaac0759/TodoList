@@ -97,3 +97,15 @@ body {
     bottom: 10px;
     width: 81%;
 }
+#compteur1 {
+    font-size: 23px;
+    color: red;
+}
+#compteur2 {
+    font-size: 23px;
+    color: green;
+}
+#compteur3 {
+    font-size: 23px;
+    color: rgb(125, 131, 125);
+}
